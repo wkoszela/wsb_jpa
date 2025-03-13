@@ -9,8 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-public class AddressDaoTest
-{
+public class AddressDaoTest {
     @Autowired
     private AddressDao addressDao;
 
@@ -42,7 +41,7 @@ public class AddressDaoTest
         // then
         assertThat(saved).isNotNull();
         assertThat(saved.getId()).isNotNull();
-        assertThat(addressDao.count()).isEqualTo(entitiesNumBefore+1);
+        assertThat(addressDao.count()).isEqualTo(entitiesNumBefore + 1);
     }
 
     @Transactional
